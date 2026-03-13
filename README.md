@@ -1,2 +1,1 @@
-# Freecodecamp-Journey
-A beginner landing page project exploring HTML, CSS, and JavaScript
+My freeCodeCamp journey projects. Currently working on Responsive Web Design. Follow my progress on Twitter: @RichmondBuilds
