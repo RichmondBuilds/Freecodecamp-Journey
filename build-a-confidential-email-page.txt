@@ -1,0 +1,49 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidential Email</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<main id="email">
+<div id="confidential">CONFIDENTIAL</div>
+<div id="top-secret">TOP SECRET</div>
+<p>Blaq Foreigner><span class="blurred">is the top agent</span></p>
+<p>Trapstar><span class="blurred">knows the secret code</span></p>
+<p>Richy Pee<span class="blurred">leads the operation</span></p>
+
+</main>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+#email {
+  padding: 50px;
+  margin-top: 50px;
+  width: 500px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+#confidential, #top-secret {
+  display: inline-block;
+  padding: 20px;
+  margin-left: 20px;
+  border: 20px solid black;
+  transform: rotate(45deg);
+}
+.blurred {
+  filter: blur(3px);
+}
+
+** end of styles.css **
+

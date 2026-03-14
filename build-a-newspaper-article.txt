@@ -1,0 +1,78 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Article</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+<main class="newspaper">
+
+<div class="name">The Stack Sentinel</div>
+
+<div class="date">March 9, 2026</div>
+
+<div class="headline">Richy Pee Closes the Deal:Developer Built for the Big Leagues</div>
+
+<div class="sub-headline">From complex problems to clean code-How one developer is redefining what it means to build for the web</div>
+
+<div class="author">By Boahen Anderson</div>
+
+<p class="text">SAN FRANCISCO, CA — In an industry flooded with developers who simply write code, Richy Pee stands out as the one who closes the deal. With a reputation for tackling complex architectural challenges and delivering clean, scalable solutions, Pee has quickly become the go-to developer for companies looking to build digital products that actually perform. "I don't just build websites," Pee explains. "I build solutions that drive revenue and growth."</p>
+
+<p class="text">Pee's approach combines technical precision with business acumen—a rare mix that has landed multiple high-profile contracts in recent months. From startups seeking their first MVP to enterprise clients needing legacy system overhauls, Pee's portfolio reflects a developer who understands that code is ultimately about results. "When Richy walks into a room, you know the project is going to ship on time and under budget," says one client. "He's the developer every company wishes they had."</p>
+
+
+</main>
+
+
+
+
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+html {
+  font-size: 24px; 
+}
+.newspaper {
+  font-size: 16px;
+  font-family: Open Sans, sans-serif;
+}
+.name {
+  font-size: 2rem;
+  font-family: Times New Roman, serif;
+}
+.name, .author {
+  text-transform: uppercase;
+}
+.headline {
+  font-size: 2em;
+  font-weight: bold;
+}
+.sub-headline {
+  font-weight: 100;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.author {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text {
+  text-indent: 20px;
+  line-height: 2em;
+}
+.text::first-letter {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+** end of styles.css **
+

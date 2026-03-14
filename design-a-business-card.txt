@@ -1,0 +1,90 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Business Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="business-card"</div>
+<img src="https://cdn.freecodecamp.org/curriculum/labs/flower.jpg" class="profile-image" alt="Richmond standing infont of an escalade">
+<p class="full-name">Richmond Osei</p>
+<p class="designation">Web Developer</p>
+<p class="company">Pee World</p>
+<hr>
+<p>richmondoseigiw@icloud.com</p>
+<p>0535970987</p>
+<a href="https://freecodecamp.org" class="portfolio-link">Portfolio</a>
+<hr>
+<div class="social-media">
+    <h2>Connect with me</h2>
+    <a href="https://www.twitter.com">Twitter</a>
+    <a href="https://www.linkedin">LinkedIn</a>
+    <a href="https://www.github.com">GitHub</a>
+    </div>
+    body {
+     background-color: rosybrown;
+     font-family: Arial, sans-serif;  
+    }
+    .business-card {
+       width: 300px;
+       background-color: lightblue;
+       padding: 20px; 
+       margin: 100px auto 0 auto;
+       text-align: center;
+       font-size: 16px;
+    }
+    .profile-image {
+        max-width: 100%;
+    }
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+    </div>
+    </div>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+     background-color: rosybrown;
+     font-family: Arial, sans-serif;  
+    }
+    .business-card {
+       width: 300px;
+       background-color: lightblue;
+       padding: 20px; 
+       margin: 100px auto 0 auto;
+       text-align: center;
+       font-size: 16px;
+    }
+    .profile-image {
+        max-width: 100%;
+    }
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+    </div>
+    </div>
+</body>
+
+</html>
+
+** end of styles.css **
+

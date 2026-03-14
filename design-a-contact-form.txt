@@ -1,0 +1,63 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="form-container">
+    <form>
+        <h2>Richy Pee</h2>
+
+        <label for="name">Name: <input type="text" id="name" name="name" required></label>
+
+
+        <label for="email">Email: <input type="email" id="email" name="email" required></label>
+
+
+        <label for="message">Message: <textarea id="message" name="message" required></textarea></label>
+
+
+<button type="submit">Submit</button>
+
+    </form>
+</div>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+.form-container {
+  background-color: black;
+  border-radius: 2em;
+  padding: 25px;
+  width: 48rem;
+}
+label {
+  margin: 25px;
+  color: white
+}
+input, textarea {
+  width: 22rem;
+  padding: 45px;
+  margin-bottom: 22px;
+}
+button {
+  background-color: blue;
+  color: white;
+  font-size: 35px;
+}
+button:hover {
+  background-color: pink;
+}
+
+** end of styles.css **
+

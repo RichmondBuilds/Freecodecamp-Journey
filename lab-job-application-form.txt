@@ -1,0 +1,69 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<form>
+   <input type="text" id="name">
+   <label for="name">Full Name</label>
+   <input type="email" id="email">
+   <label for="email">Email</label>
+   <select id="position">
+       <option value="">select a position</option>
+       <option value="frontend">Front-End Developer</option>
+       <option value="backend">Back-End Developer</option>
+       <option value="fullstack">Full-Stack Developer</option>
+       </select>
+<fieldset class="radio-group">
+    <input type="radio" name="availability" id="full-time">
+    <label for="full-time">Full-Time</label>
+    <input type="radio" name="availability" id="part-time">
+    <label for="part-time">Part-Time</label>
+</fieldset>
+<textarea id="message">
+<label for="message">Message</label>
+</textarea>
+<button type="submit"></button>
+</form>
+</div>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+input:focus, textarea:focus {
+  border-color: yellow;
+}
+input:invalid, select:invalid, textarea:invalid {
+  border-color: red;
+}
+input:valid, select:valid, textarea:valid {
+  border-color: green;
+}
+button:hover {
+  background-color: indigo;
+}
+.radio-group input[type="radio"]:checked  {
+  border-color: blue;
+  background-color: black;
+  box-shadow: 0 0 5px pink;
+}
+.radio-group input[type="radio"]:checked + label {
+  color: crimson;
+}
+
+input:first-of-type {
+  border-radius: 5px;
+}
+
+** end of styles.css **
+
