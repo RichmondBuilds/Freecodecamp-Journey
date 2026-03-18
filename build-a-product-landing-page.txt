@@ -1,0 +1,64 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body>
+<header id="header">
+  <img src="https://RichmondBuilds.org/png" id="header-img">
+  <nav id="nav-bar">
+    <a class="nav-link" href="#features" id="features">Features</a>
+   <section id="features">
+  <h2>Features</h2>
+  <p>Our product features go here.</p>
+</section> 
+    <a class="nav-link" href="#pricing" id="pricing">Pricing</a>
+    <section id="pricing">
+  <h2>Pricing</h2>
+  <p>Our pricing information goes here.</p>
+</section>
+    <a class="nav-link" href="#contact" id="contact">Contact</a>
+    <section id="contact">
+  <h2>Contact</h2>
+  <p>Get in touch with us here.</p>
+</section>
+    </nav>
+    </header>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" id="video"></iframe>
+<form id="form" action="https://www.freecodecamp.org/email-submit">
+  <input id="email" name="email" placeholder="example: richmondbuilds@gmail.com" type="email"></input>
+<input type="submit" id="submit">
+
+</form>
+
+
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  #header {
+    font-size: 14px;
+  }
+}
+#nav-bar {
+  display: flex;
+}
+
+** end of styles.css **
+
