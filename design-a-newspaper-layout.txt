@@ -1,0 +1,100 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Newspaper Layout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<main class="newspaper-layout">
+<header class="title">
+  <h1>The Daily Chronicle</h1>
+</header>
+<article class="feature-article">
+  <h2><h2>Local Hero Saves Drowning Puppy</h2>
+  <p>A Richmond resident made headlines yesterday after diving into the river to rescue a golden retriever puppy that had fallen from a bridge. Bystanders cheered as the pair emerged safely from the water.</p>
+</article>
+<article class="small-article1">
+<h3>Coffee Prices Rise Again</h3>
+<p>Local cafes announced a small price increase this week, citing higher supply costs.</p>
+</article>
+
+<article class="small-article2">
+<h3>School Wins Science Award</h3>
+<p>Students from Riverside High took first place at the regional science fair competition.</p>
+</article>
+
+<article class="small-article3">
+  <h3>New Park Opens Downtown</h3>
+  <p>The city unveiled a brand new park this Saturday, complete with benches and a fountain.</p>
+</article>
+<article class="secondary-article">
+  <h2>City Council Approves New Budget</h2>
+  <p>The city council voted unanimously to approve next year's budget, with increased funding set aside for road repairs and public libraries.</p>
+</article>
+<figure class="cover-image">
+   <img src="newspaper-cover.jpg" alt="A hero diving into the river to save a puppy">
+</figure>
+</main>
+
+
+
+
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+.title {
+  grid-area: title;
+}
+
+.feature-article {
+  grid-area: feature-article;
+}
+
+.secondary-article {
+  grid-area: secondary-article;
+}
+
+.cover-image {
+  grid-area: cover-image;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
+
+.small-article3 {
+  grid-area: small-article3;
+}
+.newspaper-layout {
+  display: grid;
+  grid-template-areas: 
+    "title title title"
+    "feature-article feature-article cover-image"
+    "secondary-article secondary-article cover-image"
+    "small-article1 small-article2 small-article3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 10px;
+}
+.cover-image img {
+  max-width: 100%;
+}
+
+
+** end of styles.css **
+
