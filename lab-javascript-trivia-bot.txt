@@ -1,0 +1,27 @@
+** start of script.js **
+
+console.log("Hello! I'm your coding fun fact guide!");
+
+let botName = "RichmondBuilds";
+let botLocation = "Kumasi";
+let favoriteLanguage = "English";
+
+console.log("My name is " + botName + " and I live on " + botLocation + ".");
+
+console.log("My favorite programming language is " + favoriteLanguage + ".");
+
+let codingFact = favoriteLanguage + " is a great language for beginners because it's easy to read and understand!";
+
+console.log(codingFact);
+
+codingFact = "Another fun fact: " + favoriteLanguage + " is used for web development, game development, and even artificial intelligence!";
+
+console.log(codingFact);
+
+codingFact = "Did you know? " + favoriteLanguage + " was created by Brendan Eich in just 10 days!";
+console.log(codingFact);
+
+console.log("It was fun sharing these facts with you. Goodbye! - " + botName + " from " + botLocation + ".");
+
+** end of script.js **
+
