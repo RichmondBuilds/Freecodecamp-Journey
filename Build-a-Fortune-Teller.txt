@@ -1,0 +1,23 @@
+const fortune1 = "Every expert was once a beginner. The fact that you started is already half the battle.";
+const fortune2 = "The path you are building today is the foundation someone else will one day admire.";
+const fortune3 = "Small, consistent steps taken in the right direction always outrun a single giant leap taken in doubt.";
+const fortune4 = "Your potential is not determined by your resources - it is revealed by your resourcefulness.";
+const fortune5 = "The world does not reward the most talented. It rewards the ones who refused to quit.";
+
+let randomNumber = Math.floor(Math.random() * 5) + 1;
+
+let selectedFortune;
+
+if (randomNumber === 1) {
+  selectedFortune = fortune1;
+} else if (randomNumber === 2) {
+  selectedFortune = fortune2;
+} else if (randomNumber === 3) {
+  selectedFortune = fortune3;
+} else if (randomNumber === 4) {
+  selectedFortune = fortune4;
+} else if (randomNumber === 5) {
+  selectedFortune = fortune5;
+}
+
+console.log(selectedFortune);
