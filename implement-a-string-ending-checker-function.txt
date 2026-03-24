@@ -1,0 +1,8 @@
+** start of script.js **
+
+function confirmEnding(compactdisk, disk) {
+return compactdisk.slice(-disk.length) === disk;
+}
+
+** end of script.js **
+
