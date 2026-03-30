@@ -1,0 +1,56 @@
+** start of script.js **
+
+const questions = [
+  {
+    category: "Geography",
+    question: "What is the capital of Ghana?",
+    choices: ["Kumasi", "Accra", "Tamale"],
+    answer: "Accra"
+  },
+  {
+    category: "Sports",
+    question: "How many players are in a football team?",
+    choices: ["9", "11", "13"],
+    answer: "11"
+  },
+  {
+    category: "Science",
+    question: "What planet is closest to the sun?",
+    choices: ["Earth", "Mars", "Mercury"],
+    answer: "Mercury"
+  },
+  {
+    category: "Technology",
+    question: "What does HTML stand for?",
+    choices: ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language"],
+    answer: "Hyper Text Markup Language"
+  },
+  {
+    category: "Music",
+    question: "Which country is Afrobeats originally from?",
+    choices: ["Ghana", "Nigeria", "South Africa"],
+    answer: "Nigeria"
+  }
+];
+function getRandomQuestion(array) {
+const index = Math.floor(
+    Math.random() * array.length
+  );
+  return array[index];
+}
+function getRandomComputerChoice(array) {
+  const index = Math.floor(
+    Math.random() * array.length
+  );
+  return array[index];
+}
+function getResults(question, computerChoice) {
+if (computerChoice === question.answer) {
+return "The computer's choice is correct!";
+} else {
+return `The computer's choice is wrong. The correct answer is: ${question.answer}`;
+}
+}
+
+** end of script.js **
+
