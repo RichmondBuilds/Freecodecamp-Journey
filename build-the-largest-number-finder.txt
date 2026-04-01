@@ -1,0 +1,13 @@
+** start of script.js **
+
+function largestOfAll(array) {
+let result = [];
+for (const subArray of array) {
+const largest = Math.max(...subArray);
+result.push(largest);
+}
+return result;
+}
+
+** end of script.js **
+
