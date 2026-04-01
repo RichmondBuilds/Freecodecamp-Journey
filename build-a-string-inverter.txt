@@ -1,0 +1,11 @@
+** start of script.js **
+
+function reverseString(str) {
+let splitStr = str.split("");
+let strReverse = splitStr.reverse();
+let joinStr = strReverse.join("");
+return joinStr;
+}
+
+** end of script.js **
+
