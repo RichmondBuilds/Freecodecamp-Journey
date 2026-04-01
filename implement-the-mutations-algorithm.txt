@@ -1,0 +1,16 @@
+** start of script.js **
+
+function mutation(array) {
+let first = array[0].toLowerCase();
+let second = array[1].toLowerCase();
+
+  for (const letter of second) {
+  if (!first.includes(letter)) {
+    return false;
+  }
+}
+return true;
+}
+
+** end of script.js **
+
