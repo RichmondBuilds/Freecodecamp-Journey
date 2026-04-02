@@ -1,0 +1,15 @@
+** start of script.js **
+
+function bouncer(array) {
+let copyArray = [...array];
+let result = [];
+for (const item of array) {
+ if (item){
+result.push(item);
+ }
+}
+return result;
+}
+
+** end of script.js **
+
