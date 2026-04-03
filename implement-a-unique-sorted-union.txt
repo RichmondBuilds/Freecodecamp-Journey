@@ -1,0 +1,11 @@
+** start of script.js **
+
+function uniteUnique(...arrays) {
+let result = [];
+let combineArray = [].concat(...arrays);
+return [...new Set(combineArray)];
+}
+
+
+** end of script.js **
+
