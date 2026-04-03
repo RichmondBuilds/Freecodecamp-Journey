@@ -1,0 +1,14 @@
+** start of script.js **
+
+function sumAll(arr) {
+let largeNum = Math.max(...arr);
+let smallNum = Math.min(...arr);
+let sum = 0;
+for (let i = smallNum; i <= largeNum; i++) { 
+sum += i;
+}
+return sum;
+}
+
+** end of script.js **
+
