@@ -1,0 +1,25 @@
+** start of script.js **
+
+function convertHTML(str) {
+let result = "";
+const htmlEntities = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&apos;"
+};
+for (const char of str) {
+  if (htmlEntities[char]) {
+    result += htmlEntities[char];
+  } else {
+    result += char;
+  }
+}
+return result;
+
+}
+
+
+** end of script.js **
+
