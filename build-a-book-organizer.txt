@@ -1,0 +1,36 @@
+** start of script.js **
+
+const books = [
+{
+title: "Pee World",
+authorName: "Richmond Builds",
+releaseYear: 2026
+},
+
+{
+title: "Foreign life",
+authorName: "Blaq Foreigner",
+releaseYear: 1945
+},
+
+{
+title: "Life In Dumasua",
+authorName: "Man Stopper",
+releaseYear: 2025
+}
+];
+
+function sortByYear(a, b) {
+  if (a.releaseYear < b.releaseYear) {
+    return -1;
+  } else if (a.releaseYear > b.releaseYear) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+const filteredBooks = books.filter(books => books.releaseYear <= 1950);
+filteredBooks.sort(sortByYear);
+
+** end of script.js **
+
