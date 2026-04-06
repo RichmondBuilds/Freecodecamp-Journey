@@ -1,0 +1,12 @@
+** start of script.js **
+
+function whatIsInAName(arrObj, souObj) {
+let result = [];
+let objKeys = Object.keys(souObj);
+let filterObject = arrObj.filter(obj => objKeys.every(key => obj[key] === souObj[key]));
+ 
+return filterObject;
+}
+
+** end of script.js **
+
