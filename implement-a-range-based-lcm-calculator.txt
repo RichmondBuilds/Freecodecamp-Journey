@@ -1,0 +1,28 @@
+** start of script.js **
+
+function smallestCommons(arr) {
+  const [min, max] = arr.sort((a, b) => a - b);
+  
+  function gcd(a, b) {
+    while (b !== 0) {
+      const temp = b;
+      b = a % b;
+      a = temp;
+    }
+    return a;
+  }
+
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+  }
+  let result = min;
+for (let i = min + 1; i <= max; i++) {
+  result = lcm(result, i);
+}
+return result;
+
+}
+
+
+** end of script.js **
+
