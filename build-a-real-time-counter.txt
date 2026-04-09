@@ -1,0 +1,48 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<textarea id="text-input"></textarea>
+<p id="char-count">Character Count: 0/50</p>
+</body>
+
+<script src="script.js"></script>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+
+
+** end of styles.css **
+
+** start of script.js **
+
+const textInput = document.getElementById("text-input");
+const charCount = document.getElementById("char-count");
+
+textInput.addEventListener("input", (event) => {
+  if (event.target.value.length > 50) {
+    event.target.value = event.target.value.slice(0, 50);
+  }
+  charCount.textContent = `Character Count: ${event.target.value.length}/50`;
+  if (event.target.value.length === 50) {
+    charCount.style.color = "red";
+  } else {
+    charCount.style.color = "";
+  }
+});
+
+
+** end of script.js **
+
