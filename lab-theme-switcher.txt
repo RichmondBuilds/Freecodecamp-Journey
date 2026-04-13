@@ -1,0 +1,88 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<button aria-controls="theme-dropdown" aria-expanded="false" aria-haspopup="true" id="theme-switcher-button"> Switch Theme</button>
+<ul aria-labelledby="theme-switcher-button" role="menu" id="theme-dropdown" hidden>
+  <li id="theme-richmondbuilds" role="menuitem">RichmondBuilds</li>
+  <li id="theme-foreigner" role="menuitem">Foreigner</li>
+</ul>
+<div aria-live="polite"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+}
+
+** end of styles.css **
+
+** start of script.js **
+
+const themes = [
+  {
+    name: "richmondbuilds",
+    message: "Building different. Cold like that, Different breed 🥶"
+  },
+  {
+    name: "foreigner",
+    message: "Abroad mentality, Ghana roots 🌍"
+  }
+];
+
+const themeSwitcher = document.querySelector("#theme-switcher-button");
+const themeDropdown = document.querySelector("#theme-dropdown");
+
+themeSwitcher.addEventListener("click", () => {
+  themeDropdown.toggleAttribute("hidden");
+  if (!themeDropdown.hasAttribute("hidden")) {
+    themeSwitcher.setAttribute("aria-expanded", "true");
+  } else {
+    themeSwitcher.setAttribute("aria-expanded", "false");
+  }
+});
+
+const ariaLive = document.querySelector("[aria-live='polite']");
+const liEls = document.querySelectorAll("li");
+
+liEls.forEach((li) => {
+  li.addEventListener("click", () => {
+    const selectedName = li.textContent.trim().toLowerCase();
+    const selectedTheme = themes.find((theme) => theme.name === selectedName);
+    document.body.className = `theme-${selectedName}`;
+    ariaLive.textContent = selectedTheme.message;
+  });
+});
+
+
+
+** end of script.js **
+
