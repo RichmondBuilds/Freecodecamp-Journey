@@ -1,0 +1,33 @@
+** start of script.js **
+
+function translatePigLatin(str) {
+    // Define vowels
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    
+    // If string starts with a vowel
+    if (vowels.includes(str[0])) {
+        return str + 'way';
+    }
+    
+    // Find index of first vowel
+    let firstVowelIndex = -1;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            firstVowelIndex = i;
+            break;
+        }
+    }
+    
+    // If no vowels found
+    if (firstVowelIndex === -1) {
+        return str + 'ay';
+    }
+    
+    // Move consonant cluster to end and add 'ay'
+    const consonantCluster = str.slice(0, firstVowelIndex);
+    const restOfWord = str.slice(firstVowelIndex);
+    return restOfWord + consonantCluster + 'ay';
+}
+
+** end of script.js **
+
