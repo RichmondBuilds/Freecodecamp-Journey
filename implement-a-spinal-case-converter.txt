@@ -1,0 +1,12 @@
+** start of script.js **
+
+function spinalCase(str) {
+  return str
+    .split(/\s|_|-|(?=[A-Z])/)
+    .map(word => word.toLowerCase())
+    .filter(word => word.length > 0)
+    .join('-');
+}
+
+** end of script.js **
+
