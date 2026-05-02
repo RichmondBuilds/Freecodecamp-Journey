@@ -1,0 +1,54 @@
+** start of script.js **
+
+function initStack() {
+  return {
+    collection: []
+  };
+}
+
+function push(stack, element) {
+  stack.collection.push(element);
+}
+
+function pop(stack) {
+  return stack.collection.pop();
+}
+
+function peek(stack) {
+  if (stack.collection.length === 0) {
+    return undefined;
+  }
+  return stack.collection[stack.collection.length - 1];
+}
+
+function isEmpty(stack) {
+  return stack.collection.length === 0;
+}
+
+function clear(stack) {
+  stack.collection = [];
+}
+
+// Example usage:
+const myStack = initStack();
+
+console.log(isEmpty(myStack)); // true
+
+push(myStack, 1);
+push(myStack, 2);
+push(myStack, 3);
+
+console.log(peek(myStack));   // 3
+console.log(isEmpty(myStack)); // false
+
+console.log(pop(myStack));    // 3
+console.log(pop(myStack));    // 2
+console.log(peek(myStack));   // 1
+
+clear(myStack);
+console.log(isEmpty(myStack)); // true
+console.log(pop(myStack));     // undefined
+console.log(peek(myStack));    // undefined
+
+** end of script.js **
+
