@@ -1,0 +1,25 @@
+** start of script.js **
+
+function bubbleSort(array) {
+    let sortedArray = [...array];
+    let swapped = true;
+    
+    while (swapped === true) {
+        swapped = false;
+        
+        for (let j = 0; j < sortedArray.length - 1; j++) {
+            if (sortedArray[j] > sortedArray[j + 1]) {
+                // Swap them
+                let temp = sortedArray[j];
+                sortedArray[j] = sortedArray[j + 1];
+                sortedArray[j + 1] = temp;
+                
+                swapped = true;
+            }
+        }
+    }
+    return sortedArray;
+}
+
+** end of script.js **
+
