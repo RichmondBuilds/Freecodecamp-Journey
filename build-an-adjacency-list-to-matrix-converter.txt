@@ -1,0 +1,37 @@
+** start of script.js **
+
+function adjacencyListToMatrix(adjacencyList) {
+    // Get all vertices from the adjacency list
+    const vertices = Object.keys(adjacencyList);
+    const n = vertices.length;
+    
+    // Create mapping from vertex to index
+    const vertexToIndex = {};
+    vertices.forEach((vertex, index) => {
+        vertexToIndex[vertex] = index;
+    });
+    
+    // Initialize n x n matrix with zeros
+    const matrix = Array(n).fill().map(() => Array(n).fill(0));
+    
+    // Fill the matrix based on adjacency list
+    for (let vertex in adjacencyList) {
+        const row = vertexToIndex[vertex];
+        const neighbors = adjacencyList[vertex];
+        
+        for (let neighbor of neighbors) {
+            const col = vertexToIndex[neighbor];
+            matrix[row][col] = 1;
+        }
+    }
+    
+    // Print each row in the adjacency matrix
+    for (let i = 0; i < n; i++) {
+        console.log(matrix[i]);
+    }
+    
+    return matrix;
+}
+
+** end of script.js **
+
