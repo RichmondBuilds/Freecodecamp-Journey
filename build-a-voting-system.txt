@@ -1,0 +1,68 @@
+** start of script.js **
+
+// Initialize poll variable to a new Map object
+const poll = new Map();
+
+// Add at least three options to the poll
+poll.set("Turkey", new Set());
+poll.set("Morocco", new Set());
+poll.set("Germany", new Set());
+
+// Function to add an option
+function addOption(option) {
+  if (option === '') {
+    return 'Option cannot be empty.';
+  } else if (!poll.has(option)) {
+    const emptySet = new Set();
+    poll.set(option, emptySet);
+    return `Option "${option}" added to the poll.`;
+  } else {
+    return `Option "${option}" already exists.`;
+  } 
+}
+
+// Function to vote
+function vote(option, voterId) {
+  if (!poll.has(option)) {
+    return `Option "${option}" does not exist.`;
+  } else if (poll.get(option).has(voterId)) {
+    return `Voter ${voterId} has already voted for "${option}".`;
+  } else {
+    poll.get(option).add(voterId);
+    return `Voter ${voterId} voted for "${option}".`;
+  }
+}
+
+// Function to display results
+function displayResults() {
+  let pollString = 'Poll Results:\n';
+  poll.forEach((voters, option) => {
+    pollString += `${option}: ${voters.size} votes\n`;
+  });
+  return pollString.trimEnd();
+}
+
+// Add at least three votes
+vote("Turkey", "voter1");
+vote("Morocco", "voter2");
+vote("Turkey", "voter3");
+
+// Example usage and testing
+console.log(addOption("Egypt"));     // Option "Egypt" added to the poll.
+console.log(addOption("Egypt"));     // Option "Egypt" already exists.
+console.log(addOption(""));          // Option cannot be empty.
+
+console.log(vote("France", "user1")); // Option "France" does not exist.
+console.log(vote("Turkey", "voter1")); // Voter voter1 has already voted for "Turkey".
+console.log(vote("Morocco", "voter4")); // Voter voter4 voted for "Morocco".
+
+console.log(displayResults());
+// Output:
+// Poll Results:
+// Turkey: 2 votes
+// Morocco: 2 votes
+// Germany: 0 votes
+// Egypt: 0 votes
+
+** end of script.js **
+
