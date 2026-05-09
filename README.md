@@ -1,1 +1,73 @@
-My freeCodeCamp journey projects. Currently working on Responsive Web Design. Follow my progress on Twitter: @RichmondBuilds
+# Freecodecamp Journey 🚀
+
+A collection of projects built while working through the freeCodeCamp JavaScript curriculum. Each project was guided by freeCodeCamp but coded and understood hands-on — no copy-paste, just building and learning.
+
+Built entirely on a mobile phone. 📱
+
+-----
+
+## Projects
+
+### 01 — Weather App
+
+**[View Code](weather-app.html)**
+
+A weather application that displays current conditions for a selected city. Pulls data and renders it dynamically to the DOM.
+
+**What I learned:**
+
+- Working with REST APIs and fetch
+- Parsing and displaying JSON data
+- Dynamic DOM updates based on user input
+
+-----
+
+### 02 — Bank Account Manager
+
+**[View Code](bank-management.html)**
+
+A browser-based banking interface for managing deposits, withdrawals, and balance tracking — built using JavaScript classes.
+
+**What I learned:**
+
+- Object-oriented programming with ES6 classes
+- State management in vanilla JavaScript
+- Input validation and error handling
+
+-----
+
+### 03 — Voting System
+
+**[View Code](voting-system.html)**
+
+An interactive voting application where users can cast votes and see results update in real time. Uses Map and Set data structures under the hood.
+
+**What I learned:**
+
+- JavaScript Map and Set
+- Event handling and real-time UI updates
+- Managing and displaying dynamic data
+
+-----
+
+### 04 — Markdown to HTML Converter
+
+**[View Code](markdown-to-html-converter.html)**
+
+A utility tool that parses Markdown syntax and converts it to formatted HTML in real time as you type.
+
+**What I learned:**
+
+- String methods and regular expressions
+- Real-time input handling
+- Parsing and transforming text content
+
+-----
+
+## About Me
+
+I’m Richmond — a self-taught developer based in Ghana 🇬🇭, building my skills one project at a time under **#RichmondBuilds**.
+
+- 🌐 Portfolio: [richmondbuilds.github.io](https://richmondbuilds.github.io)
+- 🐦 X (Twitter): [@RichmondBuilds](https://twitter.com/RichmondBuilds)
+- 📧 Email: richmondoseigiw@icloud.com
