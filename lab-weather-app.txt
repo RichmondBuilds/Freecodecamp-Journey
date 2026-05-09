@@ -1,0 +1,91 @@
+** start of index.html **
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+  </head>
+  <body>
+
+    <select id="city-dropdown">
+      <option value=""></option>
+      <option value="new york">New York</option>
+      <option value="los angeles">Los Angeles</option>
+      <option value="chicago">Chicago</option>
+      <option value="paris">Paris</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="london">London</option>
+    </select>
+
+    <button id="get-weather-btn">Get Weather</button>
+
+    <img id="weather-icon" src="" alt="weather icon" />
+    <p id="location"></p>
+    <p id="weather-main"></p>
+    <p id="main-temperature"></p>
+    <p id="feels-like"></p>
+    <p id="humidity"></p>
+    <p id="wind"></p>
+    <p id="wind-gust"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+
+** end of styles.css **
+
+** start of script.js **
+
+async function getWeather(city) {
+  try {
+    const res = await fetch(`https://weather-proxy.freecodecamp.rocks/api/city/${city}`);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function showWeather(city) {
+  const data = await getWeather(city);
+
+  if (!data || !data.main) {
+    alert('Something went wrong, please try again later');
+    return;
+  }
+
+  const na = val => (val !== undefined && val !== null) ? val : 'N/A';
+
+  const temp = na(data.main?.temp);
+  const feelsLike = na(data.main?.feels_like);
+  const humidity = na(data.main?.humidity);
+  const wind = na(data.wind?.speed);
+  const gust = na(data.wind?.gust);
+
+  document.getElementById('weather-icon').src = na(data.weather?.[0]?.icon);
+  document.getElementById('weather-main').textContent = na(data.weather?.[0]?.main);
+  document.getElementById('location').textContent = na(data.name);
+  document.getElementById('main-temperature').textContent = temp !== 'N/A' ? `${temp}°C` : 'N/A';
+  document.getElementById('feels-like').textContent = feelsLike !== 'N/A' ? `${feelsLike}°C` : 'N/A';
+  document.getElementById('humidity').textContent = humidity !== 'N/A' ? `${humidity}%` : 'N/A';
+  document.getElementById('wind').textContent = wind !== 'N/A' ? `${wind} m/s` : 'N/A';
+  document.getElementById('wind-gust').textContent = gust !== 'N/A' ? `${gust} m/s` : 'N/A';
+}
+
+document.getElementById('get-weather-btn').addEventListener('click', () => {
+  const city = document.querySelector('select').value;
+  if (!city) return;
+  showWeather(city);
+});
+
+
+** end of script.js **
+
